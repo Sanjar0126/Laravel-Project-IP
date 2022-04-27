@@ -3,18 +3,22 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Order extends Model
 {
+    public function orderlines() {
+        return $this->hasMany(Orderline::class);
+    }
     //
     protected $fillable = [
-        'date',
-        'hour',
-        'message',
-        'status'
+        'status',
+        'price'
     ];
     public function user() 
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo(User::class);
     }
+    
+    use SoftDeletes;
 }

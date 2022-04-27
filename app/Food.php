@@ -12,4 +12,19 @@ class Food extends Model
         'price',
         'category'
     ];
+
+    public function orderlines() {
+        return $this->hasMany(Orderline::class);
+    }
+
+    public function category(){
+        return $this->belongsTo(Category::class);
+    }
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'food';
 }

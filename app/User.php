@@ -2,11 +2,11 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class User extends Authenticatable //implements MustVerifyEmail
+class User extends Authenticatable 
 {
     use Notifiable;
     
@@ -14,9 +14,11 @@ class User extends Authenticatable //implements MustVerifyEmail
         return $this->hasMany('App\Contact');
     }
 
-    public function bookings() {
-        return $this->hasMany('App\Booking');
+    public function orders() {
+        return $this->hasMany('App\Order');
     }
+
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -24,15 +26,10 @@ class User extends Authenticatable //implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 
-        'email', 
+        'username', 
         'password',
-        'telNumber',
-        'dateofbirth',
-        'city',
-        'postalCode',
-        'pasportNumber'
-
+        'phone',
+        'address',
     ];
 
     /**
@@ -45,11 +42,9 @@ class User extends Authenticatable //implements MustVerifyEmail
     ];
 
     /**
-     * The attributes that should be cast to native types.
+     * The table associated with the model.
      *
-     * @var array
+     * @var string
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    protected $table = 'users';
 }

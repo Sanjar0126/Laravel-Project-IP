@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Booking;
+use App\Order;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\Translation\Dumper\JsonFileDumper;
 use Illuminate\Support\Facades\Gate;
 
-class BookingsController extends Controller
+class OrderController extends Controller
 {
     //
     /*
@@ -27,71 +27,67 @@ class BookingsController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $bookings = $user->bookings;
+        $orders = $user->orders;
         return view('reservation/reservation',[
-            'bookings' => $bookings
+            'orders' => $orders
         ]);
     }
-    public function newBooking(Request $req) {
+    public function newOrder(Request $req) {
         $this->validate($req, [
             'time' => 'required',
             'date' => 'required|date',
-            'numPerson' => 'required|regex:/\d{1,}/',
             'message' => 'nullable'
         ]);        
-        $user = Auth::user();
-        $booking = new Booking(
+        $user = User::user();
+        $order = new Order(
             [
                 'message' => $req->input('message'),
-                'numPerson' => $req->input('numPerson'),
                 'date' => $req->input('date'),
                 'hour' => $req->input('time')
             ]
         );
-        $user->bookings()->save($booking);
+        $user->orders()->save($order);
         return redirect()->route('reservation')->with([
-            'info' => 'reservation saved, Thank you'
+            'info' => 'order saved, Thank you'
         ]);
     }
 
 
     public function getEdit($id) {
-        $booking = Booking::find($id);
+        $order = Order::find($id);
         return view('reservation/edit',[
-            'booking' => $booking
+            'order' => $order
         ]);
     }
     public function postEdit(Request $req) {
          $this->validate($req, [
             'time' => 'required',
             'date' => 'required|date',
-            'numPerson' => 'required|regex:/\d{1,}/',
             'message' => 'nullable'
         ]); 
-        $booking = Booking::find($req->input('id'));
-        if(Gate::denies('update-smth', $booking)) {
+        $order = Order::find($req->input('id'));
+        if(Gate::denies('update-smth', $order)) {
             return redirect()->back()->with([
                 'info' => "You are not authorized for edit!"
             ]);
         }
-        $booking->message = $req->input('message');        
-        $booking->hour = $req->input('time');        
-        $booking->date = $req->input('date');        
-        $booking->numPerson = $req->input('numPerson');
-        $booking->save();
+        $order->message = $req->input('message');        
+        $order->hour = $req->input('time');        
+        $order->date = $req->input('date');        
+        $order->save();
         return redirect()->route('reservation')->with([
             'info' => "Succeffully updated!"
         ]);
     }
     
     public function deleteBooking($id) {
-        $booking = Booking::findOrFail($id);
-        if(Gate::denies('update-smth', $booking)) {
+        $order = Order::findOrFail($id);
+        if(Gate::denies('update-smth', $order)) {
             return redirect()->back()->with([
                 'info' => "You are not authorized for delete!"
             ]);
         }
         
-        $booking->delete();
+        $order->delete();
     }
 }
