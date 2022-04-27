@@ -16,7 +16,7 @@
                         </div>
                         <div class="topHeaderAddresses">
                             <h4>Address</h4>
-                            <h5>street Ziyolilar,Tashkent</h5>
+                            <h5>Burlesque, The Triangle, Liberty City</h5>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4 logo">
@@ -24,8 +24,9 @@
                             <div class="thl-wrapper">
                                 <a href="{{route('homeIndex')}}">
                                     <img
-                                        src="img/logo.png"
+                                        src="img/cluckin-logo.webp"
                                         alt=""
+                                        style="width:100px;height:100px;"
                                     />
                                 </a>
                             </div>
@@ -38,7 +39,7 @@
                             </div>
                             <div class="sailDepartmentSailing">
                                 <h4>Call us</h4>
-                                <h5>+998 97 777 77 77</h5>
+                                <h5>+998 97 368 68 08</h5>
                             </div>
                         </div>                        
                     </div>

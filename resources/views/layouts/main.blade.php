@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <!-- Favicon -->
-        <link rel="shortcut icon" href="{{asset('img/logo.png')}}" />
+        <link rel="shortcut icon" href="{{asset('img/cluckin-logo.webp')}}" />
         <link
             rel="stylesheet"
             href="{{asset('font-awesome-4.7.0/css/font-awesome.min.css')}}"

@@ -15,7 +15,7 @@
                 <div class="companyContent">
                   <div class="roundedContent animated fadeIn">
                     <div class="rondedImg">
-                      <img src="img/baraka1.png" alt="" />
+                      <img src="img/cluckin-logo.webp" alt="" />
                     </div>
                     <div class="companyItems">
                       <div

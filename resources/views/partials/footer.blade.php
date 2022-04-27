@@ -6,7 +6,7 @@
                 <div class="footerList">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutUs.html">About Us</a></li>
+                        <li><a href={{ route('about') }}>About Us</a></li>
                         <li><a href="menu.html">Menu</a></li>
                         <li>
                             <a href="reservation.html"
@@ -36,7 +36,7 @@
                             <div
                                 class="topHeaderAddresses companyFootadd"
                             >
-                                <h5>street Ziyolilar,Tashkent</h5>
+                                <h5>Burlesque, The Triangle, Liberty City</h5>
                             </div>
                         </div>
                     </div>
@@ -53,8 +53,8 @@
                                 class="sailDepartmentSailing companyFootphone"
                             >
                                 <h5>
-                                    <a href="tel:+998 97 777 77 77"
-                                        >+998 97 777 77 77</a
+                                    <a href="tel:+998 97 368 68 08"
+                                        >+998 97 368 68 08</a
                                     >
                                 </h5>
                             </div>

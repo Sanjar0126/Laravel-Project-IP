@@ -13,17 +13,14 @@
               <div class="contactsAndAdd col-md-6">
                 <div class="contactAdress">
                   <h4>Address</h4>
-                  <h5>street Ziyolilar,Tashkent</h5>
+                  <h5>Burlesque, The Triangle, Liberty City</h5>
                 </div>
                 <div class="contactTel">
                   <h4>
                     Phone Numbers
                   </h4>
                   <h5>
-                    +998 97 777 77 77
-                  </h5>
-                  <h5>
-                    +998 71 000 00 00
+                    +998 97 368 68 08
                   </h5>
                 </div>
               </div>
