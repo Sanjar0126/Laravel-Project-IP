@@ -1,0 +1,1309 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+.wrap {
+    background-color: #fff;
+    margin: 0 auto;
+}
+body {
+    font-family: "OpenSans-Regular";
+    color: #111;
+    /* height: 650px; */
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.container {
+    max-width: 1170px;
+    margin: 0px auto;
+}
+.container1 {
+    max-width: 1110px;
+    margin: 0px auto;
+}
+.row {
+    margin: auto;
+}
+/*/// header ///*/
+.topHeader {
+    position: relative;
+}
+.topHeaderTop {
+    background: #fff;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(61, 51, 61, 0.58);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(61, 51, 61, 0.58);
+    box-shadow: 0px 1px 5px 0px rgba(61, 51, 61, 0.58);
+    padding: 15px 0 10px 0;
+    position: relative;
+    z-index: 1000;
+}
+.topHeaderAddress {
+    font-size: 17px;
+    float: left;
+}
+.topHeaderAddress h4 {
+    color: #3157a3;
+    font-family: "OpenSans-SemiBold";
+    font-size: 17px;
+    line-height: 0.7;
+}
+.topHeaderAddress h5 {
+    font-size: 16px;
+}
+.topHeaderAddressMapIcon {
+    margin-top: 10px;
+    float: left;
+    margin-right: 7px;
+}
+.topHeaderAddresses {
+    float: none;
+}
+.topHeaderLogo {
+    margin: 0 auto;
+    position: absolute;
+    display: block;
+    top: -165px;
+    left: 0;
+    text-align: center;
+    background: #fff;
+    border-radius: 50%;
+    width: 355px;
+    height: 320px;
+    -webkit-box-shadow: 0px 18px 13px -16px rgba(61, 51, 61, 0.58);
+    -moz-box-shadow: 0px 18px 13px -16px rgba(61, 51, 61, 0.58);
+    box-shadow: 0px 18px 13px -16px rgba(61, 51, 61, 0.58);
+}
+.thl-wrapper {
+    display: block;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+}
+.lang {
+    margin: 5px 0 10px 0;
+}
+.lang a {
+    margin-left: 10px;
+    color: #000;
+}
+.lang a.active,
+.lang a:hover {
+    color: #3157a3;
+    text-decoration: none;
+}
+.lang h4 {
+    font-size: 16px;
+    font-family: "OpenSans-SemiBold";
+    text-transform: uppercase;
+    color: #3157a3;
+    display: inline-block;
+}
+.adaptivelang {
+    margin: 5px 0 10px 0;
+    display: none;
+}
+.adaptivelang a {
+    margin-right: 10px;
+    color: #f9f9f9;
+}
+.adaptivelang a.active,
+.lang a:hover {
+    color: #ffc80a;
+    text-decoration: none;
+}
+.adaptivelang h4 {
+    font-size: 16px;
+    font-family: "OpenSans-SemiBold";
+    text-transform: uppercase;
+    color: #3157a3;
+    display: inline-block;
+}
+.sailDepartmentLeft {
+    display: inline-block;
+    text-align: center;
+}
+.sailDepartment {
+    float: right;
+    font-size: 17px;
+}
+.sailDepartmentSailing h4 {
+    color: #3157a3;
+    font-family: "OpenSans-SemiBold";
+    font-size: 17px;
+    line-height: 0.7;
+}
+.sailDepartmentPhoneIcon {
+    display: inline-block;
+    vertical-align: 12px;
+    margin-right: 10px;
+}
+.sailDepartmentSailing {
+    display: inline-block;
+}
+.sailDepartmentSailing h5 {
+    font-size: 17px;
+}
+.topHeaderIcons {
+    float: right;
+    vertical-align: super;
+}
+.IconSet {
+    display: inline-block;
+    margin: 15px 4px;
+}
+ul.IconSet li a {
+    border: 1px solid #ccc;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    display: block;
+    color: #23527c;
+}
+ul.IconSet li:first-child {
+    display: inline-block;
+    margin-left: 0;
+}
+ul.IconSet li a i {
+    margin-top: 7px;
+}
+ul.IconSet li a:hover {
+    background: #0056a6;
+    color: #fff;
+}
+ul.IconSet li {
+    display: inline-block;
+    margin-left: 15px;
+}
+.topHeaderBottom {
+    background: url(../img/treeBg.png) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50px;
+    z-index: 999;
+}
+
+.topHeaderList {
+    margin: 50px 0 15px 20px;
+    float: left;
+}
+.topHeaderList li {
+    display: inline-block;
+    font-size: 17px;
+    font-family: "OpenSans-SemiBold";
+    text-transform: uppercase;
+    margin-right: 30px;
+}
+.topHeaderList li a {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000000;
+}
+.topHeaderList li a.active,
+.topHeaderList li a:hover {
+    color: #ffc80a;
+}
+.leftlist {
+    float: right;
+}
+
+.hdCarousel {
+    position: relative;
+}
+.hdCarousel img {
+    width: 100%;
+}
+.hdItem {
+    position: relative;
+}
+.fa-chevron-right:before {
+    margin-right: 10px;
+}
+.fa-chevron-left:before {
+    margin-left: 10px;
+}
+.owl-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+    background: #ffc80a;
+    width: 13px;
+    height: 13px;
+}
+.owl-theme .owl-dots .owl-dot {
+    outline: none;
+}
+
+.hdContent {
+    position: absolute;
+    bottom: 40%;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 830px;
+}
+.hdContent h1 {
+    font-family: "VAGRoundedBT-Regular", "OpenSans-Bold";
+    font-size: 55px;
+    color: #fff;
+    position: relative;
+    z-index: 5;
+    padding: 0 5%;
+    text-align: center;
+    margin-top: 10%;
+}
+.hdContent h1 span {
+    text-transform: uppercase;
+    color: #ffc80a;
+}
+.hdContentImg {
+    position: absolute;
+    z-index: 2;
+}
+.hdContentImg img {
+    width: 100%;
+}
+button.owl-prev,
+button.owl-next {
+    position: absolute;
+    bottom: 50%;
+    overflow: hidden;
+    width: 50px;
+    height: 60px;
+}
+button.owl-prev {
+    left: -5px;
+}
+button.owl-next {
+    right: -5px;
+}
+.hdCarousel i.fa.fa-chevron-left:hover,
+.hdCarousel i.fa.fa-chevron-right:hover {
+    color: #375ca693;
+}
+.hdCarousel i.fa.fa-chevron-left {
+    background: #fff;
+    padding: 20px;
+    border-radius: 0 50% 50% 0;
+    margin-left: -45px;
+    color: #375ca6;
+    font-size: 20px;
+    outline: none;
+}
+.hdCarousel i.fa.fa-chevron-right {
+    background: #fff;
+    padding: 20px;
+    border-radius: 50% 0 0 50%;
+    margin-right: -45px;
+    color: #375ca6;
+    font-size: 20px;
+    border: none;
+}
+.wave {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-top: -85px;
+}
+.wave img {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    z-index: 5;
+    transform: rotate(180deg);
+    width: 101%;
+}
+button.owl-prev,
+button.owl-next:focus {
+    outline: none;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+    background: none;
+    color: #fff;
+    text-decoration: none;
+}
+/*/// COMPANY ///*/
+
+section.companyOleo {
+    position: relative;
+    margin-bottom: 40px;
+}
+section.aboutcompanyOleo {
+    position: relative;
+    margin-bottom: 0;
+}
+.companyTitle2 {
+    margin-top: 250px;
+}
+.companyTitle h1 {
+    text-align: center;
+    color: #111;
+    font-size: 30px;
+    font-family: "OpenSans-Bold";
+    margin-bottom: 25px;
+}
+.companyBg {
+    /* background-image: url(../img/bg3.png), url(../img/bg4.png); */
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+    /* height: 72em; */
+    margin-top: -10rem;
+    position: relative;
+    z-index: 10;
+}
+
+.roundedContent {
+    overflow: hidden;
+}
+.rondedImg {
+    position: relative;
+    width: 65%;
+    z-index: 2;
+    float: left;
+}
+.rondedImg img {
+    width: 100%;
+}
+
+.companyItems {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 50%;
+    float: left;
+    z-index: 3;
+}
+.companyItems .comp-item {
+    position: relative;
+}
+.companyItems .comp-item + .comp-item {
+    margin-top: 75px;
+}
+.companyItems .comp-item.produce {
+    margin-top: 40px;
+    left: -10%;
+}
+.companyItems .comp-item.offer {
+    left: -3%;
+}
+.companyItems .comp-item.pride {
+    left: -10%;
+}
+.produceImg {
+    float: left;
+    margin-right: 15px;
+}
+.offerImg {
+    float: left;
+    margin-right: 15px;
+}
+.prideImg {
+    margin-right: 15px;
+    float: left;
+}
+.titleContent {
+    width: 69%;
+}
+.titleContent h4 {
+    font-family: "OpenSans-Bold";
+    font-size: 20px;
+    color: #3157a3;
+    /* width: 26em; */
+}
+.titleContent p {
+    font-family: "OpenSans-Regular";
+    font-size: 20px;
+}
+.companyAbout {
+    overflow: hidden;
+    margin-top: 50px;
+}
+.companyAbout p {
+    font-size: 20px;
+    font-family: "OpenSans-Regular";
+    width: 100%;
+    margin-bottom: 25px;
+}
+.companyAbout p span {
+    font-size: 20px;
+    font-family: "OpenSans-Bold";
+}
+.companyAboutContentLeft {
+    float: left;
+    width: 45%;
+    /* margin-left: 5em; */
+}
+.companyAboutContentRight {
+    float: right;
+    width: 45%;
+}
+/*/// OURPRODUCTS ///*/
+
+section.OurProducts {
+    background: url("../img/header_bg3.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.productsTitle h1 {
+    color: #fff;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.border-wrap {
+    background: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    float: left;
+}
+.menuborder-wrap {
+    /* float: left; */
+    margin-bottom: 15px;
+}
+.products-border {
+    border: 1.5px dashed #e7dbc8;
+    border-radius: 10px;
+    padding: 45px 25px 35px 25px;
+}
+.products-border:hover {
+    background: #fbc22b61;
+    transition: 0.5s;
+}
+/* .products-border img {
+  width: 100%;
+} */
+img.creamy {
+    padding: 5px;
+}
+.productsButter {
+    margin-bottom: 50px;
+}
+.butterContent {
+    float: left;
+    margin-left: 16px;
+    width: 230px;
+}
+
+.butterContent h4 {
+    font-family: "OpenSans-Bold";
+    font-size: 20px;
+    color: #fff;
+    width: 250px;
+    margin-top: 0;
+}
+.butterContent h5 {
+    font-family: "OpenSans-Bold";
+    font-size: 17px;
+    color: #033333;
+    background: #ffc80a;
+    border-radius: 10px;
+    width: 75px;
+    padding: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.butterContent p {
+    font-family: "OpenSans-Regular";
+    font-size: 17px;
+    color: #fff;
+    width: 270px;
+    border-top: 1px solid #fff;
+    padding-top: 15px;
+}
+
+.products-btn a.creative {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(90deg, #ffc80a, #7efc55);
+}
+.products-btn a.creative::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.products-btn a span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    animation: animate2 2s linear infinite;
+    background: linear-gradient(to bottom, #c3bada, #030e1f);
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+.products-btn a span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    animation: animate4 2s linear infinite;
+    background: linear-gradient(to top, #c3bada, #030e1f);
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.products-btn {
+    font-family: "OpenSans-Bold";
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    overflow: hidden;
+}
+.products-btn a:focus {
+    outline: none;
+}
+/* /// WHY? /// */
+.whyOleo {
+    background: url(../img/whyBg.png) no-repeat top center/cover;
+    padding: 4em 0;
+    background-color: #fff;
+}
+.whyTitle h1 {
+    font-family: "OpenSans-Bold";
+    font-size: 30px;
+    color: #333333;
+    text-align: center;
+    margin: 70px 0 50px 0;
+}
+.whyContent h5 {
+    text-align: center;
+    font-size: 20px;
+    font-family: "OpenSans-Regular";
+    margin-bottom: 100px;
+}
+.whyContentimg {
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.whyContentimg svg {
+    width: 130px;
+}
+
+.whyContentimg path {
+    fill: transparent;
+    stroke-width: 10;
+    stroke: #31e8ff;
+}
+
+.why .whyContentimg.icon .shrimp path {
+    stroke-dasharray: 2840;
+    stroke-dashoffset: 0;
+}
+
+.why .whyContentimg.icon .shrimp:hover path {
+    animation: animate-shrimp 2s linear forwards;
+}
+
+.why .whyContentimg.icon .drink path {
+    stroke-dasharray: 1923;
+    stroke-dashoffset: 0;
+}
+.why .whyContentimg.icon .ani-cake path {
+    stroke-dasharray: 1923;
+    stroke-dashoffset: 0;
+}
+.why .whyContentimg.icon .ani-burger path {
+    stroke-dasharray: 2900;
+    stroke-dashoffset: 0;
+}
+
+.why .whyContentimg.icon .drink:hover path {
+    animation: animate-drink 2s linear forwards;
+}
+.why .whyContentimg.icon .ani-cake:hover path {
+    animation: animate-drink 2s linear forwards;
+}
+.why .whyContentimg.icon .ani-burger:hover path {
+    animation: animate-drink 2s linear forwards;
+}
+@keyframes animate-shrimp {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 2840;
+    }
+    80% {
+        stroke-dashoffset: 5680;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 2840;
+        fill: #31e8ff;
+    }
+}
+
+@keyframes animate-drink {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 1923;
+    }
+    80% {
+        stroke-dashoffset: 3846;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 1923;
+        fill: #31e8ff;
+    }
+}
+.whyContentimg h5 {
+    text-align: center;
+    color: #3157a3;
+    font-family: "OpenSans-Bold";
+    font-size: 20px;
+    margin-bottom: 130px;
+}
+/* /// RECIPES /// */
+.recipes {
+    background: url("../img/recipe_bg.png");
+    background-size: cover;
+}
+.clientsRecalls {
+    margin-bottom: 40px;
+}
+.recalls1 {
+    margin-bottom: 8rem;
+}
+.recallsTitle h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-family: "OpenSans-Bold";
+    margin: 90px 0 65px 0;
+}
+.recallText {
+    position: relative;
+    z-index: 5;
+    border: 1px solid #dcdcdc;
+    background: #fff;
+    border-radius: 10px;
+    padding: 22px 0 35px 22px;
+    height: 210px;
+}
+.recallText h4 {
+    font-size: 20px;
+    line-height: 1.3;
+}
+.recallQuotes img {
+    position: absolute;
+    top: -1.3rem;
+}
+.recallPerson {
+    position: absolute;
+    bottom: -5rem;
+    left: 4rem;
+    z-index: 6;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 17px 45px 7px 34px;
+}
+.recallPerson h3 {
+    line-height: 0.6;
+    margin: 0;
+    font-family: "OpenSans-Bold";
+    font-size: 20px;
+    color: #3157a3;
+}
+.recalls1.col-md-6.slick-slide {
+    outline: none;
+}
+.slick-dots li button:before {
+    font-size: 35px;
+}
+.slick-track {
+    margin-top: 12px;
+}
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #ffc80a;
+    font-size: 55px;
+}
+/* /// Footer /// */
+.footerAddress {
+    overflow: hidden;
+    margin: 25px 0 25px 0;
+}
+.oleoFoot {
+    background: #f1f1f1;
+}
+.footerList {
+    margin-top: 35px;
+}
+.footerList ul {
+    display: inline-block;
+}
+.footerList ul li {
+    display: inline-block;
+    margin-right: 25px;
+    border-right: 1px solid #111;
+    line-height: 0.8;
+    padding-right: 25px;
+}
+.footerList ul li:last-child {
+    border-right: none;
+}
+.footerList ul li a {
+    text-decoration: none;
+    color: #111111;
+    font-size: 16px;
+}
+.footerList ul li a:hover {
+    color: #0056a7;
+}
+.companyFooticon {
+    float: none;
+    vertical-align: 4px;
+    margin-right: 10px;
+    margin-top: 0;
+    display: inline-block;
+}
+.companyFootaddress {
+    /* margin-right: 65px; */
+    display: inline-block;
+    text-align: center;
+}
+.companyFootadd h5 {
+    font-size: 16px;
+}
+.companyFootphone h5 {
+    font-size: 16px;
+}
+.companyFootphone h5 a {
+    color: #333;
+}
+.siteDevelopment h4 {
+    font-size: 17px;
+}
+.siteDevelopment a {
+    color: #194d9c;
+}
+.siteDevelopment a:hover {
+    color: #0056a7;
+}
+.menu-icon {
+    /* position: absolute; */
+    /* bottom: 10px; */
+    /* left: 0; */
+    float: left;
+    /* right: 0; */
+    width: 30px;
+    height: 30px;
+    padding: 0px 6px;
+    background: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: none;
+}
+.menu-icon span {
+    width: 100%;
+    height: 2px;
+    display: block;
+    background: #333;
+    margin: 4px 0;
+    transition: 0.5s;
+}
+/* .menu-icon.active span{
+	position: absolute;
+	width: calc(100% - 12px);
+	top: calc(50% - 8px);
+} */
+.menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+.menu-icon.active span:nth-child(3) {
+    transform: rotate(135deg);
+}
+.menu-icon.active span:nth-child(2) {
+    display: none;
+}
+.menu-icon p {
+    position: absolute;
+    color: #333;
+    text-transform: uppercase;
+    top: 0.1em;
+    left: 2em;
+}
+.menuCanvas.active {
+    overflow: hidden;
+}
+#exitmnu.active {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    z-index: 1001;
+}
+#exitmnu {
+    display: none;
+}
+i.fa.fa-times {
+    font-size: 30px;
+    color: #ffc80a;
+}
+.menuCanvas.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1000;
+}
+
+/* /// MENU  /// */
+
+.menubg {
+    background: url(../img/banner-bg.png) no-repeat center;
+}
+
+.mainMenu.height {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainMenuTitle h1 {
+    letter-spacing: 5px;
+    font-family: "OpenSans-Bold";
+}
+
+.mainMenu {
+    color: #333;
+}
+h1.foodtitle {
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 45px;
+    margin-bottom: 25px;
+    font-family: "VAGRoundedBT-Regular";
+}
+.mainMenuList {
+    border-bottom: 1px solid #8c6d4c;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.menuItem {
+    flex-basis: 20%;
+    text-align: center;
+}
+.menuborder-wrap img {
+    width: auto;
+    border: 1px dashed #8c6d4c;
+    border-radius: 10px;
+    padding: 10px;
+    width: 170px;
+}
+
+div.menuBg {
+    background: url(../img/productsBg.png) no-repeat top center/cover;
+    padding: 4em 0;
+    background-color: #fff;
+}
+.mainMenuTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+.mainMenuTitle h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "OpenSans-Bold";
+}
+.mainMenuContent {
+    width: auto;
+    margin: 5px;
+}
+.mainMenuContent h4 {
+    font-family: "OpenSans-Bold";
+    font-size: 20px;
+    /* width: 100%; */
+    margin-top: 0;
+}
+.mainMenuContent h5 {
+    font-family: "OpenSans-Bold";
+    font-size: 17px;
+    color: #033333;
+    background: #ffc80a;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+}
+.mainMenuContent h6 {
+    font-family: "OpenSans-Regular";
+    font-size: 19px;
+}
+.mainMenuContent p {
+    font-family: "OpenSans-Regular";
+    font-size: 19px;
+    border-top: none;
+    padding-bottom: 40px;
+    width: 100%;
+    padding-top: 15px;
+}
+/* /// RecipeLinkPage  /// */
+.recipesTitlepage {
+    text-align: center;
+    color: #333;
+    font-family: "OpenSans-Bold";
+    margin: 80px 0 70px 0;
+}
+.recipesTitlepage h1 {
+    font-size: 30px;
+}
+.recipespage {
+    background: url(../img/recipeBg1.png) no-repeat top center/cover;
+    background-color: #ffffff;
+    padding: 4em 0;
+}
+.cakeRecipepage {
+    margin-bottom: 105px;
+}
+.cookingTimeWrappage {
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: -6%;
+    right: 6%;
+    -webkit-box-shadow: -1px 3px 36px -2px rgba(0, 0, 0, 0.48);
+    -moz-box-shadow: -1px 3px 36px -2px rgba(0, 0, 0, 0.48);
+    box-shadow: -1px 3px 36px -2px rgba(0, 0, 0, 0.48);
+    text-align: center;
+    padding: 5px;
+    z-index: 1;
+}
+.cakeimgpage img {
+    width: 320px;
+    height: 260px;
+    border-radius: 10px;
+    /* height: auto; */
+    /* width: 100%; */
+}
+.cakeRecipeTextContentpage {
+    /* margin: 35px 0 0 25px; */
+    color: #333;
+    font-family: "OpenSans-Regular";
+}
+.cakeRecipeTextContentpage h1 {
+    color: #333;
+    font-family: "OpenSans-Bold";
+    font-size: 30px;
+    margin: 0 0 20px 0;
+}
+.cakeRecipeTextContentpage h3 {
+    /* width: 72%; */
+    font-size: 20px;
+    border-top: 1px solid #333;
+    margin-top: 5px;
+    padding-top: 16px;
+}
+.cakeRecipeTextContentpage h5 {
+    color: #3157a3;
+    font-family: "OpenSans-Semibold";
+    font-size: 20px;
+    margin-top: 23px;
+}
+.ingredientspage {
+    overflow: hidden;
+}
+.ingredientspage h6 {
+    font-family: "OpenSans-Regular";
+    font-size: 20px;
+    margin-top: 0;
+    line-height: 1.3;
+    padding-left: 0;
+}
+h6.rightIngredient {
+    line-height: 1.5;
+    /* width: 55%; */
+}
+.cookingTimepage {
+    padding: 0 10px;
+}
+.cookingTimepage h5 {
+    font-family: "OpenSans-Bold";
+    font-size: 12px;
+    margin: 0;
+    margin-top: 10px;
+    line-height: 1;
+}
+.cookingTimepage h1 {
+    font-family: "OpenSans-Bold";
+    color: #3157a3;
+    line-height: 1;
+    font-size: 12px;
+    margin-top: 1px;
+}
+.cookingTimepage span {
+    font-family: "OpenSans-Light";
+    font-size: 50px;
+    margin: 0;
+}
+.recipes-btn {
+    margin-top: 45px;
+    margin-bottom: 0;
+    display: block;
+    /* text-align: center; */
+}
+
+/* ///  CooKMoreInfo  /// */
+.cakeimgmore {
+    position: relative;
+}
+.cakeimgmore img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.cookingTimeWrapMoreInfo {
+    top: 6%;
+    right: 3%;
+}
+.cakeRecipeTextMoreInfo h1 {
+    margin: 55px 0 25px 0;
+}
+.cakeRecipeTextMoreInfo h3 {
+    margin-bottom: 30px;
+}
+.cakeRecipeTextMoreInfo h5 {
+    margin-bottom: 20px;
+}
+.ingredientsMoreInfo p {
+    font-size: 20px;
+    line-height: 1;
+}
+.cookingProcessText p {
+    font-size: 20px;
+}
+.cookAdvice {
+    border-radius: 10px;
+    background: #e8d7c4;
+    overflow: hidden;
+    margin-top: 35px;
+}
+.cookAdvice img {
+    float: left;
+    margin: 20px 0 0 20px;
+}
+.cookAdviceText {
+    float: left;
+    margin-left: 20px;
+    width: 80%;
+}
+.cookAdviceText h1 {
+    margin: 35px 0 20px 0;
+}
+.cookAdviceText p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.more-btn {
+    margin: 50px;
+    display: block;
+}
+
+/* Reservation */
+.ReservationBg {
+    background: url(../img/banner-bg.png) no-repeat center;
+}
+.reservation.height {
+    height: 380px;
+}
+.reservation.height {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reservationTitle {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.reservationTitle h1 {
+    letter-spacing: 5px;
+    font-family: "OpenSans-Bold";
+}
+.form-group {
+    margin-top: 20px;
+}
+.form-control {
+    width: auto;
+}
+.reserve-form {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+form.form-horizontal {
+    flex-basis: 40%;
+}
+.reserve-img {
+    flex-basis: 30%;
+}
+.reserve-btn {
+    font-family: "OpenSans-Bold";
+    font-size: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.reserve-img img {
+    width: 100%;
+}
+
+/* /// Contacts /// */
+.Contacts {
+    background: url(../img/whyBg.png) no-repeat top center/cover;
+    padding: 4em 0;
+    background-color: #fff;
+}
+.contactsTitle h1 {
+    font-family: "OpenSans-Bold";
+    font-size: 30px;
+    color: #333333;
+    text-align: center;
+    margin: 70px 0 50px 0;
+}
+.contactAdress {
+    margin-bottom: 50px;
+}
+.contactsAndAdd h4 {
+    margin-bottom: 20px;
+    color: #3157a3;
+    font-family: "OpenSans-Bold";
+    font-size: 19px;
+    line-height: 0.7;
+}
+.contactsAndAdd h5 {
+    line-height: 0.7;
+    font-size: 19px;
+    font-family: "OpenSans-Regular";
+    color: #333;
+}
+.contactForms form input {
+    /* border: none; */
+    outline: none;
+    font-size: 18px;
+}
+input.sign-name {
+    background: url(../img/person-ico.png) no-repeat 20px 14px;
+    border: 1px solid #ddd;
+    background-color: #f6f6f6;
+    border-radius: 6px;
+    width: 235px;
+    padding: 10px 0 10px 50px;
+    margin: 0 10px 5px 0;
+}
+input.sign-email {
+    background: url(../img/sms-ico.png) no-repeat 15px 14px;
+    border: 1px solid #ddd;
+    background-color: #f6f6f6;
+    border-radius: 6px;
+    width: 235px;
+    padding: 10px 0 10px 50px;
+    margin: 0 10px 5px 0;
+}
+input.sign-sms {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    background: #f6f6f6;
+    border-radius: 6px;
+    width: 480px;
+    padding: 20px 0 90px 25px;
+}
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #333333;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #333333;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #333333;
+}
+.products-btn.contact-btn {
+    text-align: left;
+    display: inline-block;
+    margin-top: 40px;
+}
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 6px 54px -9px rgba(114, 93, 93, 0.75);
+    -moz-box-shadow: 0px 6px 54px -9px rgba(114, 93, 93, 0.75);
+    box-shadow: 0px 6px 54px -9px rgba(114, 93, 93, 0.75);
+    margin-bottom: 50px;
+}
+.cookingTime2 {
+    display: none;
+}
+.topHeaderAddresses.companyFootadd {
+    float: right;
+}

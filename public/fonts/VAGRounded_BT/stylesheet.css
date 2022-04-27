@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'VAGRounded BT';
+    src: url('VAGRoundedBT-Regular.eot');
+    src: url('VAGRoundedBT-Regular.eot?#iefix') format('embedded-opentype'),
+        url('VAGRoundedBT-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

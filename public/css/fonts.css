@@ -1,0 +1,62 @@
+/* OpenSans */
+
+@font-face {
+	font-family: 'OpenSans-Regular';
+	src: url('../fonts/Open_Sans/OpenSans-Regular.eot');
+	src: url('../fonts/Open_Sans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Open_Sans/OpenSans-Regular.woff') format('woff'),
+	url("../fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+@font-face {
+	font-family: 'OpenSans-SemiBold';
+	src: url('../fonts/Open_Sans/OpenSans-SemiBold.eot');
+	src: url('../fonts/Open_Sans/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Open_Sans/OpenSans-SemiBold.woff') format('woff'),
+	url("../fonts/Open_Sans/OpenSans-SemiBold.ttf") format("truetype");
+	
+	font-style: normal;
+	font-weight: 600;
+}
+
+
+@font-face {
+	font-family: 'OpenSans-Bold';
+	src: url('../fonts/Open_Sans/OpenSans-Bold.eot');
+	src: url('../fonts/Open_Sans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Open_Sans/OpenSans-Bold.woff') format('woff'),
+	url("../fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype");
+	
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url('../fonts/Open_Sans/OpenSans-Light.eot');
+	src: url('../fonts/Open_Sans/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Open_Sans/OpenSans-Light.woff') format('woff'),
+	url("../fonts/Open_Sans/OpenSans-Light.ttf") format("truetype");
+	
+	font-style: normal;
+	font-weight: 300;
+}
+
+
+/* VAGRounded BT */
+
+@font-face {
+	font-family: 'VAGRoundedBT-Regular';
+	src: url('../fonts/VAGRounded_BT/VAGRoundedBT-Regular.eot'); 
+	src: url('../fonts/VAGRounded_BT/VAGRoundedBT-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/VAGRounded_BT/VAGRoundedBT-Regular.woff') format('woff'),
+	url("../fonts/VAGRounded_BT/VAGRON.ttf") format("truetype");
+	
+	font-style: normal;
+	font-weight: normal;
+}
+
