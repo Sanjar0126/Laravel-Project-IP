@@ -47,19 +47,13 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    //custom validation accoording to ip project criteria
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255','unique:users'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'username' => ['required', 'string', 'max:255','unique:users'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
-            'telNumber' => ['required','string','regex:/\+\d[1-9]/'],
-            'dateofbirth' => ['nullable','date'],
-            'postalCode' => ['nullable','regex:/\d{7}/'],
-            'city' => ['nullable','regex:/[A-Y]{1,}|[a-y]{1,}/'],
-            'pasportNumber' =>['nullable','regex:/^[A-Z]{2}\d{7}/']
-
+            'phone' => ['required','string','regex:/\+\d[1-9]/'],
+            'address' => ['nullable','string'],
         ]);
     }
 
@@ -72,14 +66,10 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'telNumber' =>$data['telNumber'],
+            'username' => $data['username'],
+            'phone' =>$data['phone'],
             'password' => Hash::make($data['password']),
-            'dateofbirth' => $data['dateofbirth'],
-            'postalCode' => $data['postalCode'],
-            'city' => $data['city'],
-            'pasportNumber' => $data['pasportNumber']
+            'address' => $data['address'],
         ]);
     }
 }
