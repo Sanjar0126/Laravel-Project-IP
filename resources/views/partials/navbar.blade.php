@@ -64,7 +64,7 @@
                 </ul>
                 <ul class="topHeaderList leftlist">
                     <li>
-                    <a href="{{route('reservation')}}">Book </a>
+                    <a href="{{route('order')}}">Order </a>
                     </li>
                     <li>
                     <a href="{{route('contact')}}">Contacts</a>

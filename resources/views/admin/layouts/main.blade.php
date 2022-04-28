@@ -6,7 +6,7 @@
 
     
 
-    <title>Giardino backend</title>
+    <title>Admin panel</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
@@ -19,7 +19,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark elegant-color">
-            <a class="navbar-brand" href="{{route('adminIndex')}}">Giardino Backend</a>
+            <a class="navbar-brand" href="{{route('adminIndex')}}">Admin panel</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -30,13 +30,16 @@
                   <a class="nav-link" href="{{route('adminIndex')}}">Users</a>
                 </li>
                 <li class="nav-item pl-2">
-                  <a class="nav-link" href="{{route('allBookings')}}">Orders</a>
+                  <a class="nav-link" href="{{route('allOrders')}}">Orders</a>
                 </li>
                 <li class="nav-item pl-2">
                   <a class="nav-link" href="{{route('allContacts')}}">Messages</a>
                 </li>
                 <li class="nav-item pl-2">
-                  <a class="nav-link" href="{{ route('foodIndex')}}">Foods</a>
+                    <a class="nav-link" href="{{ route('categoryIndex')}}">Categories</a>
+                  </li>
+                <li class="nav-item pl-2">
+                  <a class="nav-link" href="{{ route('foodIndex')}}">Food</a>
                 </li>
               </ul>
             </div>
@@ -85,7 +88,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
     <script>
-      //ajax for not refreshing whole page for not making poor admin angry
+      
       $(document).ready(function() {
             $('.deleteButton').on('click', function() {
                 var id = $(this).attr('jsId');
@@ -96,25 +99,25 @@
                     }
                 });                
             });
-            $('.deleteBookButton').on('click', function() {
-                var id = $(this).attr('jsBookId');
+            $('.deleteOrderButton').on('click', function() {
+                var id = $(this).attr('jsOrderId');
                 req = $.ajax({
-                    url: 'bookings/delete/'+id,
+                    url: 'orders/delete/'+id,
                     success: function() {
                         $('#book' + id).remove();
                     }
                 });                
             });
-            $('.updateBookButton').on('click', function() {
-                var id = $(this).attr('jsBookId');
+            $('.updateOrderButton').on('click', function() {
+                var id = $(this).attr('jsOrderId');
                 var len = id.length;
-                var e = document.getElementById("booking"+id);
+                var e = document.getElementById("order"+id);
                 var role = e.options[e.selectedIndex].value;
                 req = $.ajax({
-                    url: 'bookings/edit/'+id+role+len,
+                    url: 'orders/edit/'+id+role+len,
                     success: function() {
-                        $("booking"+ id +' option:selected').removeAttr('selected');
-                        $("booking"+ id + " option[value='"+ role +"']").attr("selected","selected");
+                        $("order"+ id +' option:selected').removeAttr('selected');
+                        $("order"+ id + " option[value='"+ role +"']").attr("selected","selected");
                         $(this).fadeIn(1000).fadeOut(1000);
                     }
                 });                

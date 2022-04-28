@@ -26,16 +26,16 @@ Route::post('contacts.create','ContactsController@newContact')->name('newContact
 
 
   
-Route::group(['prefix' => 'reservation'
+Route::group(['prefix' => 'order'
 ], function () {    
-    Route::get('/', 'BookingsController@index')->name('reservation');
-    Route::post('/create', 'BookingsController@newBooking')->name('newBooking');
-    Route::post('/edit', 'BookingsController@postEdit')->name('postEdit');
-    Route::get('/edit/{id}', 'BookingsController@getEdit')->name('getEdit');
-    Route::get('/delete/{id}', 'BookingsController@deleteBooking')->name('deleteBooking');  
+    Route::get('/', 'OrderController@index')->name('order');
+    Route::post('/create', 'OrderController@newOrder')->name('newOrder');
+    Route::post('/edit', 'OrderController@postEdit')->name('postEdit');
+    Route::get('/edit/{id}', 'OrderController@getEdit')->name('getEdit');
+    Route::get('/delete/{id}', 'OrderController@deleteOrder')->name('deleteOrder');  
 });
 
-Auth::routes(); //['verify' => true]
+Auth::routes(); 
 
 //Backend Routes
 Route::group(['prefix' => 'admin',
@@ -43,9 +43,11 @@ Route::group(['prefix' => 'admin',
 ], function () {
     Route::get('/', 'AdminHomeController@allUsers')->name('adminIndex');
     Route::get('user/delete/{id}', 'AdminHomeController@deleteUser')->name('deleteUser');
-    Route::get('/bookings', 'AdminHomeController@allBookings')->name('allBookings');
-    Route::get('/bookings/delete/{id}', 'AdminHomeController@deleteBookingAdmin')->name('deleteBookingAdmin');
-    Route::get('/bookings/edit/{id}', 'AdminHomeController@editBookingAdmin')->name('editBookingAdmin');
+    Route::get('/orders', 'AdminHomeController@allOrders')->name('allOrders');
+    Route::get('/orders/delete/{id}', 'AdminHomeController@deleteOrderAdmin')->name('deleteOrderAdmin');
+    Route::get('/orders/edit/{id}', 'AdminHomeController@editOrderAdmin')->name('editOrderAdmin');
+    Route::get('/categories', 'AdminHomeController@allOrders')->name('allOrders');
+
     Route::get('/contacts', 'AdminHomeController@allContacts')->name('allContacts');
     Route::get('/contacts/delete/{id}', 'AdminHomeController@deleteContactAdmin')->name('deleteContactAdmin');   
     

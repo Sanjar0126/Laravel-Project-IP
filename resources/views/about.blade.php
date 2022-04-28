@@ -3,7 +3,6 @@
     <div class="wrap">
       
       @include('partials/navbar')
-      <!-- AboutUs Start -->
       <section class="companyOleo">
         <div class="companyBg">
           <div class="container">
@@ -74,14 +73,18 @@
                     >
                       <p>
                         <span>Restaurant «Giordino»</span>
-                        Find more reasons to love life in Uzbekistan visiting To
-                        «Giordino», let the local sunrises and sunsets,
-                        delicious food and incredibly nice people enchant you.
+                        Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. In dictum lectus ut ligula
+                        fringilla, eu euismod turpis pulvinar.
+                        Vestibulum eget urna ac dolor consequat
+                        aliquam.
                       </p>
                       <p>
-                        Great service, good food and the gorgeous views to the
-                        port will make your visit unforgettable, while the
-                        amiable climate will only add to the overall atmosphere.
+                        Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. In dictum lectus ut ligula
+                        fringilla, eu euismod turpis pulvinar.
+                        Vestibulum eget urna ac dolor consequat
+                        aliquam.
                       </p>
                     </div>
                     <div
@@ -90,14 +93,18 @@
                       data-wow-delay="1s"
                     >
                       <p>
-                        Get to know the local hospitality, sunshine and a nice
-                        chat with locals, who always have a lot to tell about
-                        their history, culture and tranquil lifestyle.
+                        Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. In dictum lectus ut ligula
+                        fringilla, eu euismod turpis pulvinar.
+                        Vestibulum eget urna ac dolor consequat
+                        aliquam.
                       </p>
                       <p>
-                        During sunset, surrender to the dramatic views of the
-                        caldera, the deep blue Aegean sea and treat yourself
-                        with a glass of divine whine from local vineyards.
+                        Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. In dictum lectus ut ligula
+                        fringilla, eu euismod turpis pulvinar.
+                        Vestibulum eget urna ac dolor consequat
+                        aliquam.
                       </p>
                     </div>
                   </div>
@@ -107,7 +114,6 @@
           </div>
         </div>
       </section>
-      <!-- AboutUs End -->
 
     
       @include('partials/footer')

@@ -12,14 +12,7 @@ use Illuminate\Support\Facades\Gate;
 class OrderController extends Controller
 {
     //
-    /*
-    public function validate(Request $req) {
-        $this->validate( $req,[
-            'date' => 'required|date',
-            'hour' => 'required',
-            'numPerson' => 'required'
-        ]);
-    }*/
+
     public function __construct()
     {
        $this->middleware('auth'); //verified
