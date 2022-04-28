@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 use App\Order;
 use App\User;
@@ -59,5 +60,11 @@ class AdminHomeController extends Controller
     public function deleteContactAdmin($id) {
         $contact = Contact::findOrFail($id);
         $contact->delete();
+    }
+    public function allCategories() {
+        $categories = Category::all();
+        return view('admin/categories', [
+            'categories' => $categories,
+        ]);
     }
 }

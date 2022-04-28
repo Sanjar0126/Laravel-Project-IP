@@ -36,7 +36,7 @@
                   <a class="nav-link" href="{{route('allContacts')}}">Messages</a>
                 </li>
                 <li class="nav-item pl-2">
-                    <a class="nav-link" href="{{ route('categoryIndex')}}">Categories</a>
+                    <a class="nav-link" href="{{ route('allCategories')}}">Categories</a>
                   </li>
                 <li class="nav-item pl-2">
                   <a class="nav-link" href="{{ route('foodIndex')}}">Food</a>

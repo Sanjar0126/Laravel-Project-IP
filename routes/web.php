@@ -35,7 +35,7 @@ Route::group(['prefix' => 'order'
     Route::get('/delete/{id}', 'OrderController@deleteOrder')->name('deleteOrder');  
 });
 
-Auth::routes(); 
+Auth::routes(); //['verify' => true]
 
 //Backend Routes
 Route::group(['prefix' => 'admin',
@@ -46,7 +46,8 @@ Route::group(['prefix' => 'admin',
     Route::get('/orders', 'AdminHomeController@allOrders')->name('allOrders');
     Route::get('/orders/delete/{id}', 'AdminHomeController@deleteOrderAdmin')->name('deleteOrderAdmin');
     Route::get('/orders/edit/{id}', 'AdminHomeController@editOrderAdmin')->name('editOrderAdmin');
-    Route::get('/categories', 'AdminHomeController@allOrders')->name('allOrders');
+
+    Route::get('/categories', 'AdminHomeController@allCategories')->name('allCategories');
 
     Route::get('/contacts', 'AdminHomeController@allContacts')->name('allContacts');
     Route::get('/contacts/delete/{id}', 'AdminHomeController@deleteContactAdmin')->name('deleteContactAdmin');   
