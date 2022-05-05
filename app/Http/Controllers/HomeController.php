@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Contact;
 use App\Food;
+use App\Category;
 
 class HomeController extends Controller
 {
@@ -19,11 +20,6 @@ class HomeController extends Controller
        // $this->middleware('auth'); //verified
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {   
         $contacts = Contact::orderBy('created_at','desc')->take(4)->get();
@@ -36,11 +32,14 @@ class HomeController extends Controller
             'contacts' => $contacts
         ]);
     }
+
     public function menu() {
         $foods = Food::all()->sortByDesc('rank');
+        $categories = Category::all()->sortByDesc('order');
         return view('menu',[
-            'foods' => $foods 
-        ]            
+            'foods' => $foods ,
+            'categories' => $categories
+        ]
         );
     }
 }

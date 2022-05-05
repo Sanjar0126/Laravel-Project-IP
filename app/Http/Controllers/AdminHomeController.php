@@ -61,10 +61,5 @@ class AdminHomeController extends Controller
         $contact = Contact::findOrFail($id);
         $contact->delete();
     }
-    public function allCategories() {
-        $categories = Category::all();
-        return view('admin/categories', [
-            'categories' => $categories,
-        ]);
-    }
+
 }

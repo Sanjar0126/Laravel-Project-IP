@@ -19,6 +19,7 @@ class CreateCategoryTable extends Migration
             $table->softDeletes();
             $table->string('name');
             $table->text('description');
+            $table->integer('order');
         });
     }
 

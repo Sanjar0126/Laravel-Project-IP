@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Food;
+use App\Category;
 
 class FoodsController extends Controller {
 
-    static $categoryToNumber = ['Breakfast' => 0, 'Lunch' => 1, 'Dinner' => 2, 'Dessert' => 3, 'Drink' => 4];
 
     public function __construct()
     {
@@ -32,7 +32,10 @@ class FoodsController extends Controller {
      */
     public function create()
     {
-        return view('admin/food.create');
+        $categories = Category::all();
+        return view('admin/food.create', [
+            'categories' => $categories,
+        ]);
     }
 
     /**
@@ -50,17 +53,11 @@ class FoodsController extends Controller {
             'description' => 'required'
         ]);
 
-        //Handle File Upload
         if($request->hasFile('food_image')) {
-            //Get filename with the extension
             $filenameWithExt = $request->file('food_image')->getClientOriginalName();
-            //Get just filename
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            //Get just extension
             $extension = $request->file('food_image')->getClientOriginalExtension();
-            //Filename to store
             $filenameToStore = $filename . '_' . time() . '.' . $extension;
-            //Upload Image
             $path = $request->file('food_image')->storeAs('public/food_images', $filenameToStore);
         }
 
@@ -68,7 +65,7 @@ class FoodsController extends Controller {
         $food->name=$request->input('name');
         $food->price=$request->input('price');
         $food->rank=$request->input('rank');
-        $food->category=self::$categoryToNumber[$request->input('category')];
+        $food->category_id=$request->input('category');
         $food->food_image=$filenameToStore;
         $food->description=$request->input('description');
         $food->save();
@@ -97,8 +94,11 @@ class FoodsController extends Controller {
     public function edit($id)
     {
         $food = Food::findOrFail($id);
-
-        return view('admin/food/edit')->with('food', $food);
+        $categories = Category::all();
+        return view('admin/food/edit', [
+            'categories' => $categories,
+            'food' => $food
+        ]);
     }
 
     /**
@@ -121,6 +121,7 @@ class FoodsController extends Controller {
         if($request->hasFile('food_image')) {
             //Get filename with the extension
             $filenameWithExt = $request->file('food_image')->getClientOriginalName();
+            error_log($filenameWithExt);
             //Get just filename
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             //Get just extension
@@ -129,13 +130,14 @@ class FoodsController extends Controller {
             $filenameToStore = $filename . '_' . time() . '.' . $extension;
             //Upload Image
             $path = $request->file('food_image')->storeAs('public/food_images', $filenameToStore);
+            error_log($path);
         }
 
         $food = Food::findOrFail($id);
         $food->name=$request->input('name');
         $food->price=$request->input('price');
         $food->rank=$request->input('rank');
-        $food->category=self::$categoryToNumber[$request->input('category')];
+        $food->category_id=$request->input('category');
         if($request->hasFile('food_image')) {
             Storage::delete('public/food_images/' . $food->food_image);
             $food->food_image=$filenameToStore;

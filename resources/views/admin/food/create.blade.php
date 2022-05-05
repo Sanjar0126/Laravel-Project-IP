@@ -16,11 +16,9 @@
         <div class="form-group">
             <label for="category">Category</label>
             <select class="form-control" name="category">
-                <option>Breakfast</option>
-                <option>Lunch</option>
-                <option>Dinner</option>
-                <option>Dessert</option>
-                <option>Drink</option>
+                @foreach ($categories as $category)
+                    <option value={{ $category->id }}>{{ $category->name }}</option>
+                @endforeach
             </select>
         </div>
 

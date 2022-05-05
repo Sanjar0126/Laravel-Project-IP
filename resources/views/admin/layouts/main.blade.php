@@ -36,34 +36,35 @@
                   <a class="nav-link" href="{{route('allContacts')}}">Messages</a>
                 </li>
                 <li class="nav-item pl-2">
-                    <a class="nav-link" href="{{ route('allCategories')}}">Categories</a>
+                    <a class="nav-link" href="{{ route('catIndex')}}">Categories</a>
                   </li>
                 <li class="nav-item pl-2">
                   <a class="nav-link" href="{{ route('foodIndex')}}">Food</a>
                 </li>
               </ul>
             </div>
-            {{-- loginlogout --}}
+
             <!--Dropdown primary-->
+            <a href="{{ route('createNewCat')}}"><button class="btn btn-info" type="button">New Category</button></a>
             <a href="{{ route('createNewFood')}}"><button class="btn btn-info" type="button">New Food</button></a>
-              <div class="dropdown">
+            <div class="dropdown">
 
-                <!--Trigger-->
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">{{Auth::user()->name}}</button>
+            <!--Trigger-->
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">{{Auth::user()->name}}</button>
 
 
-                <!--Menu-->
-                <div class="dropdown-menu dropdown-primary">
-                  <a class="dropdown-item" href="{{ route('logout') }}" 
-                    onclick="event.preventDefault();
-                              document.getElementById('logout-form').submit();">logout</a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                </div>
-              </div>
-              <!--/Dropdown primary-->
+            <!--Menu-->
+            <div class="dropdown-menu dropdown-primary">
+                <a class="dropdown-item" href="{{ route('logout') }}" 
+                onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">logout</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            </div>
+            </div>
+            <!--/Dropdown primary-->
           </nav>
           @if(Session::has('info'))
           <div class="row justify-content-md-center">
@@ -139,6 +140,15 @@
                         $('#ajaxFood' + id).remove();
                     }
                 });                
+            });
+            $('.deleteCatButton').on('click', function() {
+                var id = $(this).attr('jsId');
+                req = $.ajax({
+                    url: 'categories/delete/'+id,
+                    success: function() {
+                        $('#ajaxCat' + id).remove();
+                    }
+                });
             });
             
         });

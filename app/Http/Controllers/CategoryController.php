@@ -14,7 +14,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        return view('admin/category.index')->with('categories', $categories);
     }
 
     /**
@@ -24,7 +25,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin/category.create');
     }
 
     /**
@@ -35,7 +36,19 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'order' => 'required',
+            'description' => 'required'
+        ]);
+
+        $category = new Category();
+        $category->name=$request->input('name');
+        $category->order=$request->input('order');
+        $category->description=$request->input('description');
+        $category->save();
+        
+        return redirect('/admin/categories/');
     }
 
     /**
@@ -57,7 +70,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('admin/category/edit')->with('category', $category);
     }
 
     /**
@@ -69,7 +82,18 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'order' => 'required',
+            'description' => 'required'
+        ]);
+
+        $category->name=$request->input('name');
+        $category->order=$request->input('order');
+        $category->description=$request->input('description');
+        $category->save();
+        
+        return redirect('/admin/categories/');
     }
 
     /**
@@ -78,8 +102,11 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+
+    public function destroy($category)
     {
-        //
+        error_log($category);
+        $category = Category::findOrFail($category);
+        $category->delete();
     }
 }

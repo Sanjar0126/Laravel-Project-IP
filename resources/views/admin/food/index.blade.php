@@ -19,17 +19,14 @@
                         <div class="col-md-4">
                             <p class="card-text">Price: {{$food->price}}$</p>
                             <p class="card-text">Rank: {{$food->rank}}</p>
-                            <p class="card-text">Category: {{$categoryNumberToName[$food->category]}}</p>
+                            <p class="card-text">Category: {{$food->category->name}}</p>
                         </div>    
                     </div>
                 </div>
                 <!--Card content-->
                 <div class="card-body">
-
-                    <!--Title-->
                    
                     <p class="card-text">{{$food->description}}</p>
-                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                     <div class="row">
                         <form style="col-md-6"action="{{ route('editFood',  $food->id)}}" method="GET">
                             <button type="submit" class="btn btn-light-blue btn-md">Edit</button>

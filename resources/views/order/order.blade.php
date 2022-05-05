@@ -2,12 +2,12 @@
 @section('content')
     <div class="wrap">
       @include('partials/navbar')
-        <section class="ReservationBg">
+        <section class="OrderBg">
           <div class="container">
             <div class="row">
               <div class="reservation height">
                 <div class="reservationTitle">
-                  <h1>Reservation</h1>
+                  <h1>Order</h1>
                 </div>
               </div>
             </div>
@@ -103,25 +103,21 @@
             </div>
             <div class="row">
               <div class="panel panel-primary">
-                <div class="panel-heading">Saved Reservations</div>
+                <div class="panel-heading">Saved Orders</div>
                              
                 <!-- Table -->
                 <table class="table">
                   <tr>
                     <th>#</th>
-                    <th>Number of person</th>
                     <th>Date</th>
                     <th>Time</th>
                     <th>Status</th>
-                    <th>Action</th>
                   </tr>
-                  @foreach ($bookings as $booking)
-                      <tr id="ajax{{$booking->id}}">
+                  @foreach ($orders as $order)
+                      <tr id="ajax{{$order->id}}">
                       
-                        <th>{{$booking->id}}</th>
-                        <th>{{$booking->numPerson}}</th>
+                        <th>{{$order->id}}</th>
                         <th>{{$booking->date}}</th>
-                        <th>{{$booking->hour}}</th>
                         <th>  
                           @if ($booking->status==0)
                           Processing

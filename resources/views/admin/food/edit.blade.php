@@ -1,4 +1,3 @@
-<?php $categories = ['Breakfast', 'Lunch', 'Dinner', 'Dessert', 'Drink'];?>
 @extends('admin/layouts.main')
 
 @section('content')
@@ -18,13 +17,9 @@
         <div class="form-group">
             <label for="category">Category</label>
             <select class="form-control" name="category">
-                @for($i = 0; $i < 5; $i++)
-                    @if($i != $food->category)
-                        <option>{{ $categories[$i] }}</option>
-                    @else
-                        <option selected>{{ $categories[$i] }}</option>
-                    @endif
-                @endfor
+                @foreach ($categories as $category)
+                    <option value={{ $category->id }}>{{ $category->name }}</option>
+                @endforeach
             </select>
         </div>
 

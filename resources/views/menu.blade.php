@@ -14,29 +14,13 @@
                 </div>
             </div>
         </div>
-        @for($i = 0; $i < 5; $i++)
-            @if($i == 0)
-                <h1 class="foodtitle wow fadeInRight">Breakfast</h1>
-                <div class="mainMenuList">
-            @endif
-            @if($i == 1)
-                <h1 class="foodtitle wow fadeInRight">Lunch</h1>
-                <div class="mainMenuList">
-            @endif
-            @if($i == 2)
-                <h1 class="foodtitle wow fadeInRight">Dinner</h1>
-                <div class="mainMenuList">
-            @endif
-            @if($i == 3)
-                <h1 class="foodtitle wow fadeInRight">Dessert</h1>
-                <div class="mainMenuList">
-            @endif
-            @if($i == 4)
-                <h1 class="foodtitle wow fadeInRight">Drink</h1>
-                <div class="mainMenuList">
-            @endif
+        @foreach ($categories as $category)
+
+            <h1 class="foodtitle wow fadeInRight">{{ $category->name }}</h1>
+            <div class="mainMenuList">
+
             @foreach ($foods as $food)
-            @if($food->category != $i)
+            @if($food->category_id != $category->id)
                 @continue
             @endif            
                 <div class="menuItem">
@@ -61,7 +45,7 @@
                 </div>             
             @endforeach
         </div> 
-        @endfor      
+        @endforeach      
     </section>
    @include('partials/footer')
     </div>

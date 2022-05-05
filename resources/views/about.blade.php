@@ -28,7 +28,11 @@
                         <div class="titleContent">
                           <h4>Checked</h4>
                           <p>
-                            Our restaurant was checked by Michelin inspectors several times.It was considered for gaining a star.
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. In dictum lectus ut ligula
+                            fringilla, eu euismod turpis pulvinar.
+                            Vestibulum eget urna ac dolor consequat
+                            aliquam.
                           </p>
                         </div>
                       </div>
@@ -43,7 +47,11 @@
                         <div class="titleContent">
                           <h4>Offers</h4>
                           <p>
-                            What we offer is sitting in beautifully designed place and tasting meals as a truth Aristocrat.
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. In dictum lectus ut ligula
+                            fringilla, eu euismod turpis pulvinar.
+                            Vestibulum eget urna ac dolor consequat
+                            aliquam.
                           </p>
                         </div>
                       </div>
@@ -58,7 +66,11 @@
                         <div class="titleContent">
                           <h4>Pride</h4>
                           <p>
-                            Not every restaurant bragging with having 3 Michelin stars. We are proud to announce about that. Thank you for being with us.
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. In dictum lectus ut ligula
+                            fringilla, eu euismod turpis pulvinar.
+                            Vestibulum eget urna ac dolor consequat
+                            aliquam.
                           </p>
                         </div>
                       </div>

@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/','HomeController@index')->name('homeIndex');
 Route::get('menu','HomeController@menu' )->name('menu');
 Route::get('about', function () {
-    return view('aboutUs');
+    return view('about');
 })->name('about');
 Route::get('contacts','ContactsController@index')->name('contact');
 Route::post('contacts.create','ContactsController@newContact')->name('newContact');
@@ -47,7 +47,12 @@ Route::group(['prefix' => 'admin',
     Route::get('/orders/delete/{id}', 'AdminHomeController@deleteOrderAdmin')->name('deleteOrderAdmin');
     Route::get('/orders/edit/{id}', 'AdminHomeController@editOrderAdmin')->name('editOrderAdmin');
 
-    Route::get('/categories', 'AdminHomeController@allCategories')->name('allCategories');
+    Route::get('/categories', 'CategoryController@index')->name('catIndex');
+    Route::get('/categories/create', 'CategoryController@create')->name('createNewCat');
+    Route::post('/categories/store', 'CategoryController@store')->name('storeCat');
+    Route::get('/categories/edit/{category}', 'CategoryController@edit')->name('editCat');
+    Route::put('/categories/update/{category}', 'CategoryController@update')->name('updateCat');
+    Route::get('/categories/delete/{category}', 'CategoryController@destroy')->name('deleteCat');
 
     Route::get('/contacts', 'AdminHomeController@allContacts')->name('allContacts');
     Route::get('/contacts/delete/{id}', 'AdminHomeController@deleteContactAdmin')->name('deleteContactAdmin');   
