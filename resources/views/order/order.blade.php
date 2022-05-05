@@ -37,7 +37,7 @@
             </div>
             <div class="row">
               <div class="reserve-form">
-                <form method="post" id="bookingForm" action="{{route("newBooking")}}" class="form-horizontal">
+                <form method="post" id="orderForm" action="{{route("newBooking")}}" class="form-horizontal">
                   <div class="form-group">
                     <label for="SelectPeople" class="col-sm-2 control-label">
                       People 
@@ -86,7 +86,7 @@
                       />
                     <div class="products-btn contact-btn ">
                       <div class="products-btn reserve-btn">
-                        <a class="creative" onclick="document.getElementById('bookingForm').submit();">
+                        <a class="creative" onclick="document.getElementById('orderForm').submit();">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -96,8 +96,8 @@
                     </div>
                   </div>                  
                 </form>
-                <div class="reserve-img">
-                  <img src="{{asset('img/reserve_bg.png')}}" alt="">
+                <div class="order-img">
+                  <img src="{{asset('img/order-img.png')}}" alt="">
                 </div>
               </div>
             </div>
@@ -111,29 +111,36 @@
                     <th>#</th>
                     <th>Date</th>
                     <th>Time</th>
+                    <th>Price</th>
                     <th>Status</th>
+                    <th>User</th>
                   </tr>
                   @foreach ($orders as $order)
                       <tr id="ajax{{$order->id}}">
                       
                         <th>{{$order->id}}</th>
-                        <th>{{$booking->date}}</th>
+                        <th>{{$order->date}}</th>
+                        <th>{{$order->price}}</th>
                         <th>  
-                          @if ($booking->status==0)
+                          @if ($order->status==0)
                           Processing
                           @endif 
-                          @if ($booking->status==1)
-                            Cancelled
+                          @if ($order->status==1)
+                            Paid
                           @endif
-                          @if ($booking->status==2)
+                          @if ($order->status==2)
                           Done
-                          @endif                                            
+                          @endif
+                          @if ($order->status==-1)
+                          Cancel
+                          @endif 
+                        </th>
+                        <th>{{$order->user_id->name}}</th>
+                        <th>
+                          <a class="btn btn-danger deleteButton" jsId="{{$order->id}}">Delete</a>
                         </th>
                         <th>
-                          <a class="btn btn-danger deleteButton" jsId="{{$booking->id}}">Delete</a>
-                        </th>
-                        <th>
-                          <a class="btn btn-info" href="{{route('getEdit',['id'=>$booking->id])}}">Update</a>
+                          <a class="btn btn-info" href="{{route('getEdit',['id'=>$order->id])}}">Update</a>
                         </th>
                       </tr>
                   @endforeach

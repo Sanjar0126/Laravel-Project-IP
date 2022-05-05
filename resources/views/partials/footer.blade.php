@@ -5,20 +5,15 @@
             <div class="row">
                 <div class="footerList">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index">Home</a></li>
                         <li><a href={{ route('about') }}>About Us</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li>
-                            <a href="reservation.html"
-                                >Reservation</a
-                            >
-                        </li>
+                        <li><a href="menu">Menu</a></li>
                         <li>
                             <a href="contacts.html">Contacts</a>
                         </li>
                         @if(Auth::guest())
                             <li>
-                                <a href="register.html">Register now</a>
+                                <a href="register">Register now</a>
                             </li>
                         @endif
                     </ul>

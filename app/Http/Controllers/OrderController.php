@@ -21,7 +21,7 @@ class OrderController extends Controller
     {
         $user = Auth::user();
         $orders = $user->orders;
-        return view('reservation/reservation',[
+        return view('order/order',[
             'orders' => $orders
         ]);
     }
@@ -40,7 +40,7 @@ class OrderController extends Controller
             ]
         );
         $user->orders()->save($order);
-        return redirect()->route('reservation')->with([
+        return redirect()->route('order')->with([
             'info' => 'order saved, Thank you'
         ]);
     }
@@ -48,7 +48,7 @@ class OrderController extends Controller
 
     public function getEdit($id) {
         $order = Order::find($id);
-        return view('reservation/edit',[
+        return view('order/edit',[
             'order' => $order
         ]);
     }
@@ -68,12 +68,12 @@ class OrderController extends Controller
         $order->hour = $req->input('time');        
         $order->date = $req->input('date');        
         $order->save();
-        return redirect()->route('reservation')->with([
+        return redirect()->route('order')->with([
             'info' => "Succeffully updated!"
         ]);
     }
     
-    public function deleteBooking($id) {
+    public function deleteOrder($id) {
         $order = Order::findOrFail($id);
         if(Gate::denies('update-smth', $order)) {
             return redirect()->back()->with([

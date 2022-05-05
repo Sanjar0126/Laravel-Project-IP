@@ -23,8 +23,6 @@ Route::get('about', function () {
 Route::get('contacts','ContactsController@index')->name('contact');
 Route::post('contacts.create','ContactsController@newContact')->name('newContact');
 
-
-
   
 Route::group(['prefix' => 'order'
 ], function () {    
