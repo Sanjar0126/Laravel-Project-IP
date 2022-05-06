@@ -1,14 +1,10 @@
-<!-- Given Array is used to convert category number to category name -->
-<?php $categoryNumberToName = ['Breakfast', 'Lunch', 'Dinner', 'Dessert', 'Drink']; ?>
-
 @extends('admin/layouts.main')
 @section('content')
-
 <div class="row row-cols-1 row-cols-md-3">
     @foreach ($foods as $food)
         <div class="col mb-4" id="ajaxFood{{$food->id}}">
         <!-- Card -->
-            <div class="card">
+            <div class="card" style="height: 450px; padding:2rem">
                 <div class="card-body">
                     <h4 class="card-title">{{$food->name}}</h4>
                 </div>
@@ -25,6 +21,8 @@
                 </div>
                 <!--Card content-->
                 <div class="card-body">
+
+                    <!--Title-->
                    
                     <p class="card-text">{{$food->description}}</p>
                     <div class="row">

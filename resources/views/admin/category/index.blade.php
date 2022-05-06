@@ -10,6 +10,7 @@
                 <th scope="col">name</th>
                 <th scope="col">description</th>
                 <th scope="col">order</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -19,14 +20,13 @@
                         <td>{{$category->name}}</td>
                         <td>{{$category->description}}</td>
                         <td>{{$category->order}}</td>
-                        <td>
+                        <td style="display: flex; align-items:center">
                             <a class="btn btn-danger deleteCatButton" jsId="{{$category->id}}">Delete</a>
+                            <form action="{{ route('editCat',  $category)}}" method="GET">
+                                <button type="submit" class="btn btn-light-blue ">Edit</button>
+                            </form> 
                         </td>
-                        <td>
-                        <form style="col-md-6"action="{{ route('editCat',  $category)}}" method="GET">
-                            <button type="submit" class="btn btn-light-blue btn-md">Edit</button>
-                        </form> 
-                        </td>
+                        
                     </tr>
                 @endforeach        
             </tbody>

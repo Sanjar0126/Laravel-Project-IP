@@ -17,7 +17,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet"> 
 </head>
 <body>
-    <div id="app">
+    <div id="app" style="overflow-x:hidden">
         <nav class="navbar navbar-expand-lg navbar-dark elegant-color">
             <a class="navbar-brand" href="{{route('adminIndex')}}">Admin panel</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"

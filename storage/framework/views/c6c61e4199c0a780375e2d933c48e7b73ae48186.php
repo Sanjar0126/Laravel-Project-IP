@@ -1,16 +1,16 @@
-@extends('layouts/main')
-@section('content')
+<?php $__env->startSection('content'); ?>
         <div class="wrap">
             
     <div class="wrap">
-        @include('partials/navbar')
-         @if(Session::has('info'))
+        <?php echo $__env->make('partials/navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+         <?php if(Session::has('info')): ?>
                 <div class="mb-3">
                     <div class="alert alert-danger">
-                        {{ Session::get('info') }}
+                        <?php echo e(Session::get('info')); ?>
+
                     </div>
                 </div>
-            @endif
+            <?php endif; ?>
             
                     <!-- Carousel -->
                     <div class="hdCarousel">
@@ -102,6 +102,8 @@
             </section>
             <!-- Static -->
 
-        @include('partials/footer')
+        <?php echo $__env->make('partials/footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts/main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/sanjar/ip-project/resources/views/index.blade.php ENDPATH**/ ?>

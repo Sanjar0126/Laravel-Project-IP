@@ -1,8 +1,7 @@
-@extends('layouts/main')
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="wrap">
       
-      @include('partials/navbar')
+      <?php echo $__env->make('partials/navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
       <section class="companyOleo">
         <div class="companyBg">
           <div class="container">
@@ -26,7 +25,7 @@
                           <img src="img/pro.png" alt="" />
                         </div>
                         <div class="titleContent">
-                          <h4>Service</h4>
+                          <h4>Checked</h4>
                           <p>
                             Lorem ipsum dolor sit amet, consectetur
                             adipiscing elit. In dictum lectus ut ligula
@@ -64,7 +63,7 @@
                           <img src="img/prideof.png" alt="" />
                         </div>
                         <div class="titleContent">
-                          <h4>Rating</h4>
+                          <h4>Pride</h4>
                           <p>
                             Lorem ipsum dolor sit amet, consectetur
                             adipiscing elit. In dictum lectus ut ligula
@@ -128,6 +127,7 @@
       </section>
 
     
-      @include('partials/footer')
+      <?php echo $__env->make('partials/footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     </div>
-    @endsection   
+    <?php $__env->stopSection(); ?>   
+<?php echo $__env->make('layouts/main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/sanjar/ip-project/resources/views/about.blade.php ENDPATH**/ ?>
